@@ -3,22 +3,24 @@
 (global-unset-key (kbd "C-f")) ; forward-char
 (global-unset-key (kbd "C-p")) ; previous-line
 (global-unset-key (kbd "C-n")) ; next-line
-(global-unset-key (kbd "C-M-i"))
 (global-set-key (kbd "M-j") 'backward-char)
 (global-set-key (kbd "M-l") 'forward-char)
 (global-set-key (kbd "M-i") 'previous-line)
 (global-set-key (kbd "M-I") 'scroll-down)
-(global-set-key (kbd "M-C-i") 'scroll-down)
 (global-set-key (kbd "M-k") 'next-line)
 (global-set-key (kbd "M-K") 'scroll-up)
-(global-set-key (kbd "M-C-k") 'scroll-up)
 (global-set-key (kbd "M-L") 'end-of-line)
 (global-set-key (kbd "M-C-l") 'end-of-line)
 (global-set-key (kbd "M-J") 'beginning-of-line)
 (global-set-key (kbd "M-C-j") 'beginning-of-line)
 
+(global-unset-key (kbd "M-C-i"))
+(global-unset-key (kbd "M-C-k"))
+(global-set-key (kbd "M-C-i") 'move-text-up)
+(global-set-key (kbd "M-C-k") 'move-text-down)
 (global-set-key [\M-down] 'move-text-down)
 (global-set-key [\M-up] 'move-text-up)
+(global-set-key (kbd "M-RET") 'textmate-next-line)
 
 (global-unset-key (kbd "M-b")) ; backward-word
 (global-unset-key (kbd "M-f")) ; forward-word
@@ -49,7 +51,7 @@
 (global-set-key (kbd "M-2") 'split-window-vertically)
 (global-set-key (kbd "M-3") 'split-window-horizontally)
 (global-set-key (kbd "M-4") 'delete-other-windows)
-(global-set-key (kbd "M-5") 'balance-windows)
+(global-set-key (kbd "M-+") 'balance-windows)
 
 (global-unset-key (kbd "M-x")) ; execute-extended-command
 (global-set-key (kbd "M-a") 'execute-extended-command)
@@ -66,7 +68,7 @@
 (global-set-key (kbd "M-z") 'undo)
 
 (global-unset-key (kbd "C-SPC")) ; set-mark-command
-(global-set-key (kbd "M-SPC") 'set-mark-command)
+(global-set-key (kbd "M-ö") 'set-mark-command)
 (global-set-key (kbd "M-S-SPC") 'mark-paragraph)
 
 (global-unset-key (kbd "C-w")) ; kill-region
@@ -111,9 +113,10 @@
 (global-set-key (kbd "C-x n r") 'indirect-region)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
 (global-set-key (kbd "C-h r") 'yari)
-(global-set-key (kbd "C-c C-k") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "M-C") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c k") 'kill-compilation)
 (global-set-key (kbd "C-x t") 'senny-terminal)
+(global-set-key (kbd "C-e") 'jone-ido-open-eggfile)
 
 ;; Window management
 (global-set-key (kbd "C-+") 'increase-font-size) ; increase the font-size
@@ -179,6 +182,7 @@
 (global-set-key (kbd "C-p o") 'senny-persp/org)
 (global-set-key (kbd "C-p s") 'persp-switch)
 (global-set-key (kbd "C-p p") 'senny-persp-last)
+(global-set-key (kbd "C-p b") 'jone-ido-open-buildout-eggfile)
 
 ;; narrowing
 (global-unset-key (kbd "M-m"))

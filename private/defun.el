@@ -412,3 +412,50 @@ major mode for the newly created buffer."
                                       (symbol-name (symbol-at-point))
                                     ""))))
   (rgrep pattern "*" (textmate-project-root)))
+
+
+(defun jone-ido-open-buildout-eggfile ()
+  (interactive)
+  (let* ((path "~/projects/")
+         (project-name (ido-completing-read "Project: "
+                                            (directory-files path nil "^[^.]")))
+         (path (concat path project-name "/"))
+
+         (buildout-name (ido-completing-read
+                         "Buildout: "
+                         (mapcar (lambda (x) (let ((parts (split-string x "/")))
+                                               (nth (- (length parts) 2) parts)))
+                                 (file-expand-wildcards (concat path "/*/src")))))
+         (path (concat path buildout-name "/src/")))
+
+    (senny-persp (concat project-name "/" buildout-name))
+    (find-file (ido-open-find-directory-files
+                (concat path (ido-completing-read "Egg: "
+                                                  (directory-files path)))))))
+
+
+(defun jone-ido-open-eggfile ()
+  (interactive)
+  (setq path (jone-find-src-directory))
+  (find-file (ido-open-find-directory-files
+                (concat path (ido-completing-read "Egg: "
+                                                  (directory-files path))))))
+
+
+(defun jone-list-to-path (l)
+  (reduce 'concat l
+          :initial-value ""
+          :key (lambda (x) (format "%s/" (if (listp x) (car x) x)))))
+
+
+(defun jone-find-src-directory ()
+  (interactive)
+  (setq path (split-string default-directory "/"))
+  (setq continue t)
+  (while (and path continue)
+    (let ((part (car (last path))))
+      (if (equal "src" part)
+          (setq continue nil)
+        (setq path (butlast path 1)))))
+  (jone-list-to-path path))
+
