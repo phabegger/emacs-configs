@@ -4,7 +4,7 @@
 
 ;; Accounts
 (setq jabber-account-list
-      '(("yves.senn@gmail.com"
+      '(("tschouns@gmail.com"
          (:network-server . "talk.google.com")
          (:connection-type . ssl)))
       jabber-show-offline-contacts nil
