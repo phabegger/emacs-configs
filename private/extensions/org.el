@@ -2,7 +2,7 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 ;; Configuration
-(setq org-agenda-files (directory-files "~/Dropbox/org" t "^[^.].*")
+(setq org-agenda-files (directory-files "/Users/jone/idisk/notes/org/" t "^[^.].*")
       org-log-done t
       org-clock-persist t
       org-clock-out-when-done nil
