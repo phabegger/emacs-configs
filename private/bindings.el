@@ -116,6 +116,7 @@
 (global-set-key (kbd "M-C") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c k") 'kill-compilation)
 (global-set-key (kbd "C-x t") 'senny-terminal)
+(global-set-key (kbd "C-e") 'jone-ido-open-eggfile)
 
 ;; Window management
 (global-set-key (kbd "C-+") 'increase-font-size) ; increase the font-size
@@ -181,6 +182,7 @@
 (global-set-key (kbd "C-p o") 'senny-persp/org)
 (global-set-key (kbd "C-p s") 'persp-switch)
 (global-set-key (kbd "C-p p") 'senny-persp-last)
+(global-set-key (kbd "C-p b") 'jone-ido-open-buildout-eggfile)
 
 ;; narrowing
 (global-unset-key (kbd "M-m"))
