@@ -192,3 +192,6 @@
 ;; registers
 (global-unset-key (kbd "C-j"))
 (global-set-key (kbd "C-j") 'jump-to-register)
+
+;; Flymake
+(global-set-key (kbd "C-§") 'flymake-goto-next-error)
