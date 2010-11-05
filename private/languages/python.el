@@ -10,7 +10,6 @@
   (local-set-key (kbd "C-M-<return>") 'jone-python-goto-definition))
 
 (defun jone-python-completion-mode-hook ()
-  "use company mode"
   (local-set-key (kbd ")") 'jone-insert-closing-bracket-or-move-foreward))
 
 (defun jone-python-flymake-mode-hook ()

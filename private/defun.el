@@ -451,3 +451,9 @@ major mode for the newly created buffer."
         (setq path (butlast path 1)))))
   (jone-list-to-path path))
 
+
+(defun jone-insert-closing-bracket-or-move-foreward ()
+  (interactive)
+  (if (and (char-after) (string= (char-to-string (char-after)) ")"))
+      (forward-char)
+    (insert ")")))
