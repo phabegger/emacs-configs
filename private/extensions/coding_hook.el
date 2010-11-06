@@ -3,7 +3,7 @@
 
 (defun local-column-number-mode ()
   (make-local-variable 'column-number-mode)
-  (column-number-mode t))
+  (column-number-mode 0))
 
 (defun local-comment-auto-fill ()
   (set (make-local-variable 'comment-auto-fill-only-comments) t)
