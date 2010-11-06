@@ -2,6 +2,8 @@
 (server-start)
 
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setenv "PATH" (concat (getenv "PATH") ":" (expand-file-name "~/.bin")))
+(setenv "PATH" (concat (getenv "PATH") ":" (expand-file-name "~/bin")))
 (setq exec-path (cons "/usr/local/bin" exec-path))
 
 ;; use emacs keybindings.
@@ -11,7 +13,7 @@
 (set-default-font "-apple-consolas-medium-r-normal--13-130-72-72-m-130-iso10646-1")
 
 ;; set maximize-frame padding for OS-X doc
-(setq mf-display-padding-height 120)
+;; (setq mf-display-padding-height 120)
 
 (setq mac-emulate-three-button-mouse nil)
 
