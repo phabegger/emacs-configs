@@ -3,7 +3,7 @@
 
 (defun local-column-number-mode ()
   (make-local-variable 'column-number-mode)
-  (column-number-mode 0))
+  (column-number-mode 1))
 
 (defun local-comment-auto-fill ()
   (set (make-local-variable 'comment-auto-fill-only-comments) t)
@@ -37,7 +37,7 @@
                                     ,(make-char 'greek-iso8859-7 107))
                     nil))))))
 
-(add-hook 'coding-hook 'local-column-number-mode)
+;; (add-hook 'coding-hook 'local-column-number-mode)
 (add-hook 'coding-hook 'local-comment-auto-fill)
 (add-hook 'coding-hook 'turn-on-save-place-mode)
 (add-hook 'coding-hook 'turn-on-whitespace)
