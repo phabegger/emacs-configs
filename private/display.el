@@ -31,8 +31,10 @@
 ;; Highlight the current line
 (global-hl-line-mode t)
 
-(line-number-mode t)
-(column-number-mode t)
+(line-number-mode 0)
+(column-number-mode 0)
+(require 'linum)
+(global-linum-mode t)
 
 ;; Use a vertical bar as cursor
 (blink-cursor-mode 1)
