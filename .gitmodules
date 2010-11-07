@@ -19,3 +19,6 @@
 [submodule "vendor/textmate.el"]
 	path = vendor/textmate.el
 	url = https://github.com/defunkt/textmate.el.git
+[submodule "vendor/mrsd.el"]
+	path = vendor/mrsd.el
+	url = git@github.com:collective/mrsd.el.git
