@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name:grok.View class
+# --
+${1:from five import grok}
+class ${2:ClassName}(grok.View):
+    grok.context(I${3:Context})
+    grok.name('${4:name}')
+

@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: plone.z3cform Form class
+# --
+${1:from five import grok}
+${2:import z3c.form}
+${3:from plone.z3cform import layout}
+class ${13:$4}(${14:z3c.form.form.Form}):
+    fields = field.Fields(I${5:Schema})
+    label = _(u'label_$6', default=u'$7')
+    ignoreContext = ${8:True}
+
+    @z3c.form.button.buttonAndHandler(_(u'button_$9', default=u'$10'))
+    def handle_$9(self, action):
+        ${14:pass}
+
+`(newline)`class ${4:MyForm}View(grok.CodeView, layout.FormWrapper):
+    grok.context(I${11:Context})
+    grok.name('${12:$6}')
+    form = $13
+
+    def __init__(self, *args, **kwargs):
+        grok.CodeView.__init__(self, *args, **kwargs)
+        layout.FormWrapper.__init__(self, *args, **kwargs)
+
+    __call__ = layout.FormWrapper.__call__

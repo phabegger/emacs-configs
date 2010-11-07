@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: grok.Adapter class
+# --
+${1:from five import grok}
+class ${2:AdapterName}(grok.Adapter):
+    """ $3
+    """
+    grok.provides(I${4:Interface})
+    grok.context(I${5:Interface})
+    $6

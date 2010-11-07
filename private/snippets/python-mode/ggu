@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: grok.GlobalUtility class
+# --
+${1:from five import grok}
+class ${2:UtilityName}(grok.GlobalUtility):
+    """ $3
+    """
+    grok.provides(I${4:nterface})
+    $5
