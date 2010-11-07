@@ -8,7 +8,11 @@
      (define-key *textmate-mode-map* (kbd "M-p") 'textmate-goto-symbol)
      (define-key *textmate-mode-map* (kbd "M-t") 'textmate-goto-file)
      (define-key *textmate-mode-map* (kbd "M-w") 'textmate-goto-symbol)
-     (define-key *textmate-mode-map* (kbd "M-T") 'textmate-goto-symbol)))
+     (define-key *textmate-mode-map* (kbd "M-T") 'textmate-goto-symbol)
+     (setq *textmate-project-roots*
+           (append *textmate-project-roots* '("setup.py" "bootstrap.py")))
+     (setq textmate-find-files-command
+           (concat textmate-find-files-command "|grep -v \"egg-info\""))))
 
 (vendor 'textmate)
 (textmate-mode 1)
