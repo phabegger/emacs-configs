@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: vocabulary utility
+# --
+${1:from five import grok}
+${2:from zope.schema.interfaces import IVocabularyFactory}
+${3:from zope.schema.vocabulary import SimpleVocabulary}
+class ${4:My}${5:Vocabulary}(object):
+    grok.implements(IVocabularyFactory)
+
+    def __call__(self, context):
+        terms = []
+        $7terms.append(SimpleVocabulary.createTerm('foo', str('foo'), 'Foo'))
+        return SimpleVocabulary(terms)
+`(newline)`grok.global_utility($4$5, name=u'$6')

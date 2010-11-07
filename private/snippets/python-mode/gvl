@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: grok.Viewlet class
+# --
+${1:from five import grok}
+class ${2:ViewletName}(${3:grok.Viewlet}):
+    """ $4
+    """
+    grok.name('$5')
+    grok.context(I${6:Context})
+    grok.viewletmanager(I${7:ViewletManager})
+    grok.require('${8:zope2.View}')
+    
+    $9
+

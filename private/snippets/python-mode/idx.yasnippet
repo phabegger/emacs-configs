@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: plone indexer adapter
+# binding: "idx"
+# --
+${1:from plone.indexer import indexer}
+@indexer(${2:Interface})
+def ${3:name}(obj):
+    $4
+    return
+grok.global_adapter($3, name='$3')
+
