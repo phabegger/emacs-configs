@@ -11,7 +11,8 @@
                             'rinari
                             'yari
                             'haml-mode
-                            'sass-mode)
+                            'sass-mode
+                            'highlight-80+)
   "Libraries that should be installed by default.")
 
 (defun senny-elpa-install ()
