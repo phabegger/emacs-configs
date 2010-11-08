@@ -203,4 +203,4 @@
 ;; run that in buffer with a canceled compolation for
 ;; restarting purpose
 (global-set-key (kbd "C-c f f") 'ftw-zope-foreground)
-(global-set-key (kbd "M-w") 'jone-ido-open-eggfile)
+(global-set-key (kbd "M-W") 'jone-ido-open-eggfile)
