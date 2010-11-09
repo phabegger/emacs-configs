@@ -45,3 +45,28 @@
 (vendor 'theme-roller)
 (setq theme-roller-active-themes '(color-theme-lazy color-theme-monokai))
 (theme-roller-activate)
+
+
+;; funs for maximizing
+(defun jone-maximize-frame-on-alternate-screen ()
+  "Maximizes the emacs window on *my* alternate / second screen"
+  (interactive)
+  (setq mf-display-padding-height 20)
+  (setq mf-display-padding-width 0)
+  (setq mf-offset-x 1440)
+  (setq mf-offset-y 0)
+  (setq mf-max-width 1920)
+  (setq mf-max-height 1200)
+  (x-maximize-frame)
+  (x-maximize-frame))
+
+(defun jone-maximize-frame-on-primary-screen ()
+  "Maximizes the emacs window on *my* primary screen"
+  (interactive)
+  (setq mf-display-padding-height 40)
+  (setq mf-display-padding-width 0)
+  (setq mf-offset-x 00)
+  (setq mf-offset-y 0)
+  (setq mf-max-width 1440)
+  (setq mf-max-height 900)
+  (x-maximize-frame))
