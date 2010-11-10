@@ -12,7 +12,7 @@
      (setq *textmate-project-roots*
            (append *textmate-project-roots* '("setup.py" "bootstrap.py")))
      (setq textmate-find-files-command
-           (concat textmate-find-files-command "|grep -v \"egg-info\""))))
+           (concat textmate-find-files-command "|grep -v \"egg-info\"|grep -v \".svn\""))))
 
 (vendor 'textmate)
 (textmate-mode 1)
