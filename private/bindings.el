@@ -195,3 +195,9 @@
 
 ;; Flymake
 (global-set-key (kbd "C-§") 'flymake-goto-next-error)
+
+;; Compiling: global set starting in fg, we want to
+;; run that in buffer with a canceled compolation for
+;; restarting purpose
+(global-set-key (kbd "C-c f f") 'ftw-zope-foreground)
+(global-set-key (kbd "M-w") 'jone-ido-open-eggfile)
