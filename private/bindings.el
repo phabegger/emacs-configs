@@ -75,7 +75,6 @@
 (global-set-key (kbd "M-ö") 'set-mark-command)
 (global-set-key (kbd "M-S-SPC") 'mark-paragraph)
 
-(global-unset-key (kbd "C-w")) ; kill-region
 (global-unset-key (kbd "M-w")) ; kill-ring-save
 (global-unset-key (kbd "C-y")) ; yank
 (global-unset-key (kbd "M-y")) ; yank-pop
@@ -90,8 +89,6 @@
 (global-unset-key (kbd "C-x C-w")) ; write-file
 (global-set-key (kbd "C-o") 'find-file)
 (global-set-key (kbd "C-S-o") 'senny-open-file-at-point)
-(global-set-key (kbd "C-w") 'close-current-buffer)
-(global-set-key (kbd "C-w") 'close-current-buffer)
 (global-set-key (kbd "C-S-n") 'write-file)
 (global-set-key (kbd "C-S-a") 'mark-whole-buffer)
 
@@ -160,6 +157,8 @@
 
 ;;;; isearch
 (define-key isearch-mode-map (kbd "M-s") 'move-cursor-next-pane)
+(define-key isearch-mode-map (kbd "M-f") 'isearch-repeat-forward)
+(define-key isearch-mode-map (kbd "M-F") 'isearch-repeat-backward)
 (define-key isearch-mode-map (kbd "M-v") 'isearch-yank-kill)
 (define-key isearch-mode-map (kbd "M-w") 'isearch-query-replace)
 (define-key isearch-mode-map (kbd "M-o") 'isearch-yank-word)
