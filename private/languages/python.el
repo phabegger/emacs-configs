@@ -94,7 +94,7 @@ Follows the symlink if the target is within a /src directory."
     ;; maybe the import line imports multiple thing seperated by ","
     (if (search "," line)
         (let* ((line (split-string line "import"))
-               (symbol (string-trim (ido-completing-read "Symbol: "
+               (symbol (jone--python-string-trim (ido-completing-read "Symbol: "
                                                          (split-string
                                                           (replace-regexp-in-string
                                                            "\n" ""
@@ -184,6 +184,24 @@ Follows the symlink if the target is within a /src directory."
         (if (not (jone--python-goto-symbol (concat "class " symbol)))
             (progn (beginning-of-buffer)
                    (search-forward symbol))))))
+
+;; helper functions
+
+(defun jone--python-string-ltrim (str)
+  (let ((trim-pos (string-match "\\s +$" str)))
+    (if trim-pos
+        (substring str 0 trim-pos)
+      str)))
+
+(defun jone--python-string-rtrim (str)
+  (let ((trim-pos (string-match "[^ \t]+" str)))
+    (if trim-pos
+        (substring str trim-pos)
+      str)))
+
+(defun jone--python-string-trim (str)
+  (jone--python-string-rtrim (jone--python-string-ltrim str)))
+
 
 ;; Python mode hooks
 (add-hook 'python-mode-hook 'jone-default-python-mode-hook)
