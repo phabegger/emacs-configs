@@ -53,10 +53,15 @@
 (global-set-key (kbd "M-4") 'delete-other-windows)
 (global-set-key (kbd "M-+") 'balance-windows)
 
+
 (global-unset-key (kbd "M-x")) ; execute-extended-command
 (global-set-key (kbd "M-a") 'execute-extended-command)
 (global-set-key (kbd "M-e") 'shell-command)
 
+(global-unset-key (kbd "C-d"))
+(global-unset-key (kbd "C-w"))
+(global-unset-key (kbd "C-s"))
+(global-unset-key (kbd "C-a"))
 (global-set-key (kbd "C-d") 'windmove-right)
 (global-set-key (kbd "C-s") 'windmove-down)
 (global-set-key (kbd "C-a") 'windmove-left)
