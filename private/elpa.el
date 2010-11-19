@@ -12,7 +12,8 @@
                             'yari
                             'haml-mode
                             'sass-mode
-                            'highlight-80+)
+                            'highlight-80+
+                            'diff-git)
   "Libraries that should be installed by default.")
 
 (defun senny-elpa-install ()
