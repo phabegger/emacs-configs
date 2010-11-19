@@ -88,7 +88,7 @@
         (define-key map (kbd "C-c f C-r") 'ftw-mrsd-reload)
         (define-key map (kbd "C-c f z") 'ftw-zope-instane)
         (define-key map (kbd "C-c f c") 'ftw-open-changelog-make-entry)
-        (define-key map (kbd "C-c f s") 'jone-reload-safari)
+        (define-key map (kbd "C-c f s") 'sort-lines)
         map
         ))
 
