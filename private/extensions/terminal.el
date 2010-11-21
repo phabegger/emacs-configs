@@ -97,4 +97,10 @@
   (local-set-key (kbd "M-O") 'term-send-down))
 
 
+(defun jone-term-color-fix ()
+  "Reset foreground and background colors"
+  (setq term-default-fg-color (face-foreground 'default))
+  (setq term-default-bg-color (face-background 'default)))
+
 (add-hook 'term-mode-hook 'jone-term-binding-fix)
+(add-hook 'term-mode-hook 'jone-term-color-fix)
