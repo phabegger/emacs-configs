@@ -74,6 +74,12 @@
   (interactive "MOptions:")
   (call-interactively 'run-buildout-based-on-buffer))
 
+(defun ftw-sort-block-at-point ()
+  "Sorts lines of the block at point. Used for sorting python imports."
+  (interactive)
+  (mark-paragraph)
+  (call-interactively 'sort-lines))
+
 ;; (defvar ftw-mode-map
 (setq ftw-mode-map
       (let ((map (make-sparse-keymap)))
@@ -88,7 +94,7 @@
         (define-key map (kbd "C-c f C-r") 'ftw-mrsd-reload)
         (define-key map (kbd "C-c f z") 'ftw-zope-instane)
         (define-key map (kbd "C-c f c") 'ftw-open-changelog-make-entry)
-        (define-key map (kbd "C-c f s") 'sort-lines)
+        (define-key map (kbd "C-c f s") 'ftw-sort-block-at-point)
         map
         ))
 
