@@ -69,3 +69,4 @@
 
 ;; load some vendor stuff
 (vendor 'python-pep8)
+(vendor 'doctest-mode)
