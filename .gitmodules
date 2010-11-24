@@ -22,3 +22,6 @@
 [submodule "vendor/mrsd.el"]
 	path = vendor/mrsd.el
 	url = git@github.com:collective/mrsd.el.git
+[submodule "vendor/full-ack.el"]
+	path = vendor/full-ack.el
+	url = https://github.com/nschum/full-ack.git
