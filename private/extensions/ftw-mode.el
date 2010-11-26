@@ -85,7 +85,6 @@
       (let ((map (make-sparse-keymap)))
         (define-key map (kbd "C-c f f") 'ftw-zope-foreground)
         (define-key map (kbd "C-c f k") 'ftw-zope-kill)
-        (define-key map (kbd "C-c f t") 'ftw-zope-test)
         (define-key map (kbd "C-c f i") 'ftw-zope-i18n-build)
         (define-key map (kbd "C-c f C-i") 'ftw-zope-i18n-sync)
         (define-key map (kbd "C-c f b") 'ftw-zope-buildout)

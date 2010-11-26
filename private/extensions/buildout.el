@@ -138,7 +138,7 @@ will search until it finds a suitable buildout to execute."
     (let ((test-command (concat buildout-directory "bin/test")))
       (cond ((file-exists-p test-command)
              (progn
-               (set-buffer (buffer-name (compile test-command)))
+               (set-buffer (buffer-name (pdb test-command)))
                (ignore-errors (kill-buffer "*Test output*"))
                (rename-buffer "*Test output*")))
             (t (message "No test command found in the buildout"))))))
