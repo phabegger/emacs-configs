@@ -18,6 +18,18 @@
  '(ns-pop-up-frames nil)
  '(nxml-attribute-indent 6)
  '(nxml-child-indent 4)
+ '(po-default-file-header "msgid \"\"
+msgstr \"\"
+\"Project-Id-Version: 1.0\\n\"
+\"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\\n\"
+\"Last-Translator: Jonas Baumann <j.baumann@4teamwork.ch>\\n\"
+\"Language-Team: 4teamwork <info@4teamwork.ch>\\n\"
+\"MIME-Version: 1.0\\n\"
+\"Content-Type: text/plain; charset=utf-8\\n\"
+\"Content-Transfer-Encoding: 8bit\\n\"
+")
+ '(po-translation-project-address "info@4teamwork.ch")
+ '(po-translation-project-mail-label "4teamwork")
  '(ruby-use-encoding-map t)
  '(sh-basic-offset 2)
  '(speedbar-use-images nil))
