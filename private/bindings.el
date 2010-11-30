@@ -70,6 +70,8 @@
 (global-set-key (kbd "M-S") 'move-cursor-previous-pane)
 (global-set-key (kbd "<f5>") 'ns-toggle-fullscreen)
 (global-set-key (kbd "<f6>") 'theme-roller-cycle)
+(global-set-key (kbd "<f7>") 'jone-maximize-frame-on-primary-screen)
+(global-set-key (kbd "<f8>") 'jone-maximize-frame-on-alternate-screen)
 (windmove-default-keybindings) ;; Shift+direction
 
 (global-unset-key (kbd "C-/")) ; undo
