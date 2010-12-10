@@ -6,6 +6,9 @@
  ;; If there is more than one, they won't work right.
  '(cc-other-file-alist (quote (("\\.cc\\'" (".hh" ".h")) ("\\.hh\\'" (".cc" ".C")) ("\\.m\\'" (".h")) ("\\.c\\'" (".h")) ("\\.h\\'" (".c" ".cc" ".C" ".CC" ".cxx" ".cpp" ".m")) ("\\.C\\'" (".H" ".hh" ".h")) ("\\.H\\'" (".C" ".CC")) ("\\.CC\\'" (".HH" ".H" ".hh" ".h")) ("\\.HH\\'" (".CC")) ("\\.c\\+\\+\\'" (".h++" ".hh" ".h")) ("\\.h\\+\\+\\'" (".c++")) ("\\.cpp\\'" (".hpp" ".hh" ".h")) ("\\.hpp\\'" (".cpp")) ("\\.cxx\\'" (".hxx" ".hh" ".h")) ("\\.hxx\\'" (".cxx")))))
  '(emulate-mac-swiss-german-keyboard-mode t)
+ '(erc-autojoin-channels-alist (quote (("freenode.net" "#emacs" "#plone"))))
+ '(erc-away-nickname "jone")
+ '(erc-email-userid "jone")
  '(inhibit-startup-screen t)
  '(javascript-indent-level 2 t)
  '(jde-jdk (quote ("CurrentJDK OS-X")))

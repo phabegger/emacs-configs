@@ -43,9 +43,7 @@ Has no effect when `persp-show-modestring' is nil."
 (defun senny-persp/irc ()
   (interactive)
   (senny-persp "@IRC"
-               (erc)
-               (dolist (channel '("emacs" "ruby" "cucumber"))
-                 (erc-join-channel channel))))
+               (erc)))
 
 (defun senny-persp/terminal ()
   (interactive)
