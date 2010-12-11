@@ -13,7 +13,8 @@
                             'haml-mode
                             'sass-mode
                             'highlight-80+
-                            'diff-git)
+                            'diff-git
+                            'full-ack)
   "Libraries that should be installed by default.")
 
 (defun senny-elpa-install ()
