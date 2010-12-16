@@ -60,6 +60,13 @@ nil."
     (message (concat "Found buildout at: " previous))
     previous))
 
+(defun find-buildout-root-next (path)
+  "Search PATH for a buildout root.
+
+If a buildout root is found return the path, othwise return
+nil."
+  (find-parent-with-file default-directory "bootstrap.py"))
+
 ;; Run buildout
 (defun run-buildout-based-on-buffer ()
   "Execute buildout based on the path of the current buffer. It
@@ -134,7 +141,7 @@ will search until it finds a suitable buildout to execute."
 (defun run-tests-based-on-buffer ()
   "Run the compile command based on the path of the current buffer"
   (interactive)
-  (let ((buildout-directory (find-buildout-root default-directory)))
+  (let ((buildout-directory (find-buildout-root-next default-directory)))
     (let ((test-command (concat buildout-directory "bin/test")))
       (cond ((file-exists-p test-command)
              (progn
