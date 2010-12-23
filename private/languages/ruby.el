@@ -95,7 +95,8 @@
      (vendor 'rvm)
 
      ;; active the default ruby configured with rvm
-     (when (fboundp 'rvm-use-default)
+     (when (and (fboundp 'rvm-use-default)
+                (rvm--ruby-default))
        (rvm-use-default))
 
      ;;;; Bindings
