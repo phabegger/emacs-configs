@@ -96,7 +96,7 @@
 
      ;; active the default ruby configured with rvm
      (when (and (fboundp 'rvm-use-default)
-                (rvm--ruby-default))
+                (file-executable-p rvm-executable))
        (rvm-use-default))
 
      ;;;; Bindings
