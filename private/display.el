@@ -65,7 +65,7 @@
   (interactive)
   (setq mf-display-padding-height 40)
   (setq mf-display-padding-width 0)
-  (setq mf-offset-x 00)
+  (setq mf-offset-x 40)
   (setq mf-offset-y 0)
   (setq mf-max-width 1440)
   (setq mf-max-height 900)
