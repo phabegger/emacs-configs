@@ -1,4 +1,5 @@
 (defun jone-default-python-mode-hook ()
+  (setq tab-width 4)
   (set-pairs '("(" "{" "[" "\"" "\'" "`"))
 
   ;; additional modes
