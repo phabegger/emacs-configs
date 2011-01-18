@@ -39,7 +39,8 @@ msgstr \"\"
  '(po-translation-project-mail-label "4teamwork")
  '(ruby-use-encoding-map t)
  '(sh-basic-offset 2)
- '(speedbar-use-images nil))
+ '(speedbar-use-images nil)
+ '(tramp-encoding-shell "/bin/zsh"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
