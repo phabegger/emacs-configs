@@ -70,3 +70,15 @@
   (setq mf-max-width 1440)
   (setq mf-max-height 900)
   (x-maximize-frame))
+
+(defun jone-maximize-frame-on-big-primary-screen ()
+  "Maximizes the emacs window on *my* alternate / second screen"
+  (interactive)
+  (setq mf-display-padding-height 20)
+  (setq mf-display-padding-width 0)
+  (setq mf-offset-x 40)
+  (setq mf-offset-y 0)
+  (setq mf-max-width 1920)
+  (setq mf-max-height 1200)
+  (x-maximize-frame)
+  (x-maximize-frame))

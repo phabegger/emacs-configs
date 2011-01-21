@@ -72,6 +72,7 @@
 (global-set-key (kbd "<f6>") 'theme-roller-cycle)
 (global-set-key (kbd "<f7>") 'jone-maximize-frame-on-primary-screen)
 (global-set-key (kbd "<f8>") 'jone-maximize-frame-on-alternate-screen)
+(global-set-key (kbd "S-<f8>") 'jone-maximize-frame-on-big-primary-screen)
 (windmove-default-keybindings) ;; Shift+direction
 
 (global-unset-key (kbd "C-/")) ; undo
