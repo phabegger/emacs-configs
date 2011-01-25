@@ -79,7 +79,7 @@
 (global-unset-key (kbd "C-_")) ; undo
 (global-set-key (kbd "M-z") 'undo)
 
-(global-unset-key (kbd "C-SPC")) ; set-mark-command
+(global-set-key (kbd "C-SPC") 'set-mark-command) ; set-mark-command
 (global-set-key (kbd "M-ö") 'set-mark-command)
 (global-set-key (kbd "M-S-SPC") 'mark-paragraph)
 
@@ -92,7 +92,7 @@
 (global-set-key (kbd "M-V") 'yank-pop)
 (global-set-key (kbd "M-b") 'browse-kill-ring)
 
-(global-unset-key (kbd "C-x C-f")) ; find-file
+(global-set-key (kbd "C-x C-f") 'find-file) ; find-file
 (global-unset-key (kbd "C-x h")) ; mark-whole-buffer
 (global-unset-key (kbd "C-x C-w")) ; write-file
 (global-set-key (kbd "C-o") 'find-file)
